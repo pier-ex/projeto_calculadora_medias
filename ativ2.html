@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de médias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>            <!-- links usados para a fonte roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./main.css">   <!-- vinculamos o css com o html usando essa tag-->
+</head>
+<body>
+    <div class="container">
+        <header> <!--aqui criamos um cabeçalho-->
+            <img src="./logo.jpg" alt="capelo e diploma"> <!--criamos uma tag img, src é o caminho da imagem usada, o alt é a descrição da imagem-->
+            <h1>Calculadora de medias</h1> <!--criamos nosso titulo com a tag h1-->
+        </header> <!--fechamos a tag cabeçalho-->
+        <form id="form-atividade"> <!--criamos um formulário-->
+            <input type="text" id="nome-atividade" required placeholder="Nome da atividade"/> <!--criamos um input to tipo texto que o usuario ira inserir o nome da atividade, o required solicita ao usuario que preencha o campo, o placeholder é a mensagem informada dentro do campo-->
+            <input type="number" id="nota-atividade" required placeholder="Nota da atividade" min="0" max="10" /> <!--criamos um input do tipo número que o usuario ira inserir sua nota, o min se trata do mínimo que é 0, o max de maximo que é 10-->
+            <button type="submit">Adicionar +</button> <!-- aqui criamos um botão do tipo submit que a diferença é semântica, se trata de algo mais especifico, nesse caso o botão de dentro do formulário-->
+        </form> <!--fechamos nosso formulário-->
+        <table cellspacing="0"> <!--criamos uma tabela, nossas escritas estavam com um espaçamento entre as linhas, usamos o cellspacing em 0 para remover isso, img está na pasta.-->
+            <thead> <!--criamos o cabeçalho da nossa tabela-->
+                <tr> <!--criamos uma linha, isso faz com que todo o nosso contéudo de dentro do tr, esteja em cima de uma linha-->
+                    <th> <!--criamos nome das nossas colunas-->
+                        Nome da atividade
+                    </th>
+                    <th>
+                        Nota da atividade
+                    </th>
+                    <th>
+                        Aprovado?
+                    </th>
+                </tr>
+            </thead> <!--fechamos o cabeçalho da tabela-->
+            <tbody> <!--usamos a tag tbody para criar o contéudo da tabela-->
+            </tbody> <!--fechamos o tbody-->
+            <tfoot> <!-- aqui criamos um rodapé da tabela-->
+                <tr> <!--criamos uma linha-->
+                    <td>Média final</td> <!-- aqui criamos as colunhas e seus contéudos-->
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado">---</td> 
+                    <!-- A tag <span> é uma tag HTML que serve para agrupar e estilizar partes de um texto ou elementos em linha. É uma caixa genérica que não possui significado semântico específico. 
+                        A tag <span> é útil para:
+                        Estilizar partes específicas de um texto 
+                        Separar partes do texto para que o código CSS ou a programação JavaScript possam atuar nelas 
+                        Incluir palavras-chave importantes, sinalizando sua relevância para os motores de busca -->
+                </tr> <!-- criamos uma linha-->
+            </tfoot> <!-- fechemos nosso rodapé-->
+        </table> <!-- fechamos nossa tabela-->
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

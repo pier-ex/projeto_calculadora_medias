@@ -1,0 +1,111 @@
+* {
+    margin: 0;                      /* tiramos a margin e o padding padrão com tais tags */
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto", sans-serif;       /*puxamos a font roboto com esse tag */
+}
+
+body {
+    background-color: #e7e7e7 ; /* alteramos a cor de fundo do nosso body */
+    padding-top: 100px; /* espaçamento na parte de cima */
+}
+
+header {
+    display: flex;  /* usamos o display flex para deixar os itens do header um ao lado do outro */
+    align-items: center; /* usamos para centraliza-los na vertical */
+    margin-bottom: 40px; /* margem criada na parte inferior do header, usada para separar do formulário */
+}
+
+header img {  /* acessamos o header e a img de dentro dele */
+    height: 36px; /* determina a altura da área do conteúdo de um elemento */
+    margin-right: 16px; /*margem da direita de 16 pixels */
+    
+}
+
+
+header h1 { /* acessamos o header e o h1 de dentro dele */
+    font-size: 40px; /* tamanho da fonte */
+    font-weight: bold; /* utilizado para colocar negrito em um elemento */
+
+}
+
+.container { /* essa regra faz com que nosso contéudo fique centralizado, mesmo usando um monitor ultrawide*/
+    max-width:960px ; /* largura maxima do elemento */
+    width: 100%;        /*define a largura da área de conteúdo de um elemento */
+    margin: 0 auto; /* regra usada para centralizar na horizontal*/
+}
+
+form { /* o os inputs não estavam alinhados corretamente, usamos essa regra para corrigir isso */
+    display: flex; /* organiza elementos em uma página web de forma flexível, permitindo que os elementos se ajustem sozinhos dentro de um contêiner */
+    max-width: 640px;  /*define a largura máxima que um elemento pode ter. É útil para evitar que os elementos se espalhem demais em telas maiores, o que pode prejudicar a legibilidade e a usabilidade do site. 
+    A propriedade max-width impede que o valor usado da propriedade width se torne maior que o valor especificado por max-width */
+    width: 100%; /* indica que um elemento deve ocupar 100% da largura do elemento pai. Isso significa que o elemento irá ocupar todo o espaço horizontal disponível dentro do seu elemento pai */
+    justify-content: space-between; /* regra usada para distribuir o espaçamento entre os itens */
+    margin-bottom: 56px; /* aqui criamos uma margem inferior de 56px, entre o forumlário e a tabela */
+}                               
+
+
+form input {  /*acessamos nossos inputs */
+    font-size: 24px; /* tamanho do input*/
+    background-color: white; /* cor de fundo do input*/
+    border: none; /* tiramos a borda do nosso input */
+    border-bottom: 2px solid #0000; /* define a borda de baixo de um elemento HTML com 2 pixels de espessura e estilo sólido, com a cor preta */
+    padding: 8px;
+}
+
+
+form button { /* acessamos nosso botão */
+    background-color: #009432; /* cor de fundo do nosso botão */
+    color: white; /* cor da escrita do nosso botão */
+    font-size: 24px;    /* tamanho do nosso botão*/
+    font-weight: bold;  /* define o peso ou intensidade da fonte, incluindo o negrito. Para deixar o texto em negrito, basta definir o valor de font-weight como bold*/
+    border: none; /* removemos a borda do botão */
+    cursor: pointer; /* quando passarmos o mouse por cima ira aperecer o cursor */
+    padding: 8px;
+    
+}
+
+table {
+    width: 100%; /* nossa tabela não estava usando 100% do nosso container, usamos esta regra para corrigir. */
+}
+
+table th {
+    border-bottom: 2px solid black; /* é uma propriedade do CSS que define uma borda de 2 pixels de espessura, de cor preta e sólida na parte inferior de um elemento HTML*/
+    padding: 16px; /* é um comando em CSS que define uma distância de 16 pixels entre a margem interna de um elemento e suas bordas*/
+    font-size: 24px; /* o tamanho das nossas escritas localizadas dentro da nossa table, dentro das tags th */
+    font-weight: bold;  /* Font-weight: bold é uma sintaxe CSS que define um trecho de texto em negrito*/
+
+}
+
+table td {
+    padding: 16px /* top e bottom 16px */ 0px /* laterais 0 */ ; /* nossa img e as escritas ficaram mt coladas com a linhas, usamos essa regra para criar um espaçamento */
+    text-align: center; /* os itens do nosso td estavam desalinhados em relação aos itens da tabela, corrigimos isso com essa regra */
+    font-size: 18px; /* tamanho do contéudo do td */
+    border-bottom: 1px solid rgba(0, 0,0, 0.5); /* border-bottom: 1px solid (0, 0,0, 0.5) é uma propriedade do CSS que define a borda de baixo de um elemento, com espessura de 1 pixel, cor de (0, 0,0, 0.5) e estilo solid, o 0.5 é a transparência trazendo para nós um tipo de cinza */
+}
+
+
+table td img {
+    height: 30px; /* aqui alteramos o tamanho da nossa imagem dentro do td que é a comemoração */
+
+}
+
+
+.resultado { /* acessamos a class resultado */
+    padding: 18px; /* colocamos nela um espaçamento de 18 px*/
+    font-weight: bold; /* adicionamos um negrito */
+    font: white; /* font: Define a família de fontes, colocamos a cor branca nela */
+    background-color: grey; /* o fundo preto*/
+    border-radius: 3px; /* A propriedade border-radius: 3px serve para arredondar um elemento, dando-lhe um aspecto mais agradável */
+    
+}
+
+/* abaixo criamos um aprovado e reprovado com suas respectivas cores, e para usa-los no html concatnamos com a tag resultado acima ex: <td><span class="resultado aprovado">aprovado</span></td>  OU <td><span class="resultado reprovado">aprovado</span></td> */
+.aprovado { 
+    background-color: #009432;
+}
+
+
+.reprovado {
+    background-color: red;
+}
