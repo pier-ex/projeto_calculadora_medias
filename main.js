@@ -56,7 +56,7 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal(); // criamos a var que recebera o valor de calculaMediaFinal, e o valor de media final vem do return de somaDasNotas / notas.lenght;
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal; // aqui recuperamos o valor do id, levamos ao html com o innerHTML e resultado que aparecerá la sera o de mediaFinal
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2); // aqui recuperamos o valor do id, levamos ao html com o innerHTML e resultado que aparecerá la sera o de mediaFinal, o toFixed limitara as casas decimais em 2git add
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado; // aqui então se mediaFinal for maior ou igual a nota minima, aparecerá a img de aprovado, se não aparecerá a img de reprovado
 
     // lembrando que o ? significa um if e o : um else nesse caso. 
